@@ -1,0 +1,70 @@
+﻿body {
+}
+
+#budget_in {
+    background-color: burlywood;
+    height: 110px;
+    width: 230px;
+    border: 3px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#tbl_tasajakauma {
+    border: 3px solid green;
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#tbl_tasajakauma td {
+    min-width: 70px;
+    padding: 0px;
+    text-align: right;
+    font-size: small;
+}
+
+#tbl_toteutunut {
+    border: 3px solid green;
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#tbl_toteutunut td {
+    min-width: 70px;
+    padding: 0px;
+    text-align: right;
+    font-size: small;
+}
+
+.mth_h {
+    text-align: left !important;
+}
+
+.hdr {
+    background-color: darkgray;
+}
+
+.mth_fixed {
+    background-color: darkgray;
+}
+
+.mth_pct {
+    background-color: cadetblue;
+}
+
+.text_in {
+    width: 66px;
+}
+
+.withinbudget {
+    background-color: green;
+}
+
+.overbudget {
+    background-color: orange;
+}

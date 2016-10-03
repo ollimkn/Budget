@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Budjetti</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Budjetti</h1>
+            <h3>Tasajakauma vs. toteutunut</h3>
+        </hgroup>
+    </header>
+
+    <div>
+        <div id="budget_in">
+            <p><label for="vuosibudjetti">Vuosibudjetti</label>
+            <input type="text" id="vuosibudjetti" class="text_in" />€</p>
+            <p><input type="radio" name="radio_val_type" id="radCumul" />Kertymä
+            <input type="radio" name="radio_val_type" id="radMonth" checked />Kuukausittainen</p>
+            <p><button id="btnUpdate">Päivitä</button></p>
+        </div>
+        <table id="tbl_tasajakauma">
+            <tr>
+                <th colspan="13" class="hdr">TASAJAKAUMA</th>
+            </tr>
+            <tr>
+                <td class="mth_h">Tammi</td>
+                <td class="mth_h">Helmi</td>
+                <td class="mth_h">Maalis</td>
+                <td class="mth_h">Huhti</td>
+                <td class="mth_h">Touko</td>
+                <td class="mth_h">Kesä</td>
+                <td class="mth_h">Heinä</td>
+                <td class="mth_h">Elo</td>
+                <td class="mth_h">Syys</td>
+                <td class="mth_h">Loka</td>
+                <td class="mth_h">Marras</td>
+                <td class="mth_h">Joulu</td>
+                <td>Yht.</td>
+            </tr>
+            <tr>
+                <td id="mth_1" class="mth_fixed">€</td>
+                <td id="mth_2" class="mth_fixed">€</td>
+                <td id="mth_3" class="mth_fixed">€</td>
+                <td id="mth_4" class="mth_fixed">€</td>
+                <td id="mth_5" class="mth_fixed">€</td>
+                <td id="mth_6" class="mth_fixed">€</td>
+                <td id="mth_7" class="mth_fixed">€</td>
+                <td id="mth_8" class="mth_fixed">€</td>
+                <td id="mth_9" class="mth_fixed">€</td>
+                <td id="mth_10" class="mth_fixed">€</td>
+                <td id="mth_11" class="mth_fixed">€</td>
+                <td id="mth_12" class="mth_fixed">€</td>
+                <td id="tot_fixed" class="mth_fixed">€</td>
+            </tr>
+            <tr>
+                <td id="mth_pct_1" class="mth_pct">%</td>
+                <td id="mth_pct_2" class="mth_pct">%</td>
+                <td id="mth_pct_3" class="mth_pct">%</td>
+                <td id="mth_pct_4" class="mth_pct">%</td>
+                <td id="mth_pct_5" class="mth_pct">%</td>
+                <td id="mth_pct_6" class="mth_pct">%</td>
+                <td id="mth_pct_7" class="mth_pct">%</td>
+                <td id="mth_pct_8" class="mth_pct">%</td>
+                <td id="mth_pct_9" class="mth_pct">%</td>
+                <td id="mth_pct_10" class="mth_pct">%</td>
+                <td id="mth_pct_11" class="mth_pct">%</td>
+                <td id="mth_pct_12" class="mth_pct">%</td>
+                <td class="mth_pct">100%</td>
+            </tr>
+        </table>
+        <table id="tbl_toteutunut">
+            <tr>
+                <th colspan="13" class="hdr">TOTEUTUNUT</th>
+            </tr>
+            <tr>
+                <td class="mth_h">Tammi</td>
+                <td class="mth_h">Helmi</td>
+                <td class="mth_h">Maalis</td>
+                <td class="mth_h">Huhti</td>
+                <td class="mth_h">Touko</td>
+                <td class="mth_h">Kesä</td>
+                <td class="mth_h">Heinä</td>
+                <td class="mth_h">Elo</td>
+                <td class="mth_h">Syys</td>
+                <td class="mth_h">Loka</td>
+                <td class="mth_h">Marras</td>
+                <td class="mth_h">Joulu</td>
+                <td>Yht.</td>
+            </tr>
+            <tr>
+                <td class="mth"><input type="text" id="mth_act_1" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_2" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_3" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_4" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_5" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_6" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_7" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_8" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_9" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_10" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_11" class="text_in" /></td>
+                <td class="mth"><input type="text" id="mth_act_12" class="text_in" /></td>
+                <td id="tot_actual" class="mth_fixed">€</td>
+            </tr>
+            <tr>
+                <td id="mth_act_pct_1" class="mth_pct">%</td>
+                <td id="mth_act_pct_2" class="mth_pct">%</td>
+                <td id="mth_act_pct_3" class="mth_pct">%</td>
+                <td id="mth_act_pct_4" class="mth_pct">%</td>
+                <td id="mth_act_pct_5" class="mth_pct">%</td>
+                <td id="mth_act_pct_6" class="mth_pct">%</td>
+                <td id="mth_act_pct_7" class="mth_pct">%</td>
+                <td id="mth_act_pct_8" class="mth_pct">%</td>
+                <td id="mth_act_pct_9" class="mth_pct">%</td>
+                <td id="mth_act_pct_10" class="mth_pct">%</td>
+                <td id="mth_act_pct_11" class="mth_pct">%</td>
+                <td id="mth_act_pct_12" class="mth_pct">%</td>
+                <td id="tot_actual_pct" class="mth_pct">%</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.3.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
